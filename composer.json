@@ -1,0 +1,16 @@
+{
+    "name": "judac/brexit-tweets",
+    "description": "UK tweets posted in the last day which are about Brexit",
+    "type": "project",
+    "authors": [
+        {
+            "name": "judachury",
+            "email": "judachury@gmail.com"
+        }
+    ],
+    "require": {
+        "abraham/twitteroauth": "^1.0",
+        "mustache/mustache": "~2.5",
+        "mashape/unirest-php": "^3.0"
+    }
+}

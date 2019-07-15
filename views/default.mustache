@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Brexit tweets</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/83a81218c1.js"></script>
+        <style>
+            #feed-control, #feed-bottom-control, #bexit-tweets {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .custom-switch label {
+                margin-bottom: 10px;
+            }
+            .update-tweets-message .message {
+                padding: 20px;
+                font-size: 1.1rem;
+                text-align: center;
+                background-color: #1da1f2bf;
+                border-radius: 5px;
+            }
+            .update-tweets-message .message:hover {
+                cursor: pointer;
+            }
+            .profile-img {
+                border-radius: 50%;
+            }
+            .fa-meh {
+                color: grey;
+            }
+            .fa-smile {
+                color: green;
+            }
+            .fa-frown {
+                color: red;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+            <header>
+                <h1>{{content}}</h1>
+                <h4>{{description}}</h4>
+            </header>
+            <main id="brexit-tweet-app" data-tweets="#bexit-tweets" data-top-controls="#feed-control" data-bottom-controls="#feed-bottom-control" data-controls-alert=".update-tweets-message">
+                {{> partials/tweets}}        
+            </main>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

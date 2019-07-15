@@ -1,0 +1,25 @@
+{{#tweets}}
+<li class="list-group-item" data-tweet-id="{{tweet_id}}">
+    <article class="d-flex">
+        <div class="p-2 flex-shrink-1">
+            <img class="profile-img" src="{{tweet_user_image_url}}" alt="{{tweet_user_name}} profile image" />
+        </div>
+        <div class="p-2 w-100">
+            <header>
+                <h3>{{tweet_user_name}} @{{tweet_user_screenname}}</h3>
+                <small>{{#twitter_account_location}} {{twitter_account_location}} | {{/twitter_account_location}}{{tweet_create_at}}</small>
+            </header>
+            <div>
+                <p>{{tweet_text}}</p>
+                <div>
+                    <div class="float-right">
+                        <i class="far fa-{{sentiment_icon}} fa-2x"></i>
+                        {{! <i class="far fa-smile fa-2x"></i>
+                        <i class="far fa-frown fa-2x"></i> }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</li>
+{{/tweets}}
